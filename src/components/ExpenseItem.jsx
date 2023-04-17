@@ -37,17 +37,20 @@ function ExpenseItem({ expense, index, handleDelete, handleEdit }) {
           </div>
         </>
       ) : (
-        <form onSubmit={submit} className="w-full flex justify-between gap-8">
+        <form
+          onSubmit={submit}
+          className="w-full flex justify-start max-md:gap-2 gap-8"
+        >
           <input
             type="text"
-            className="flex-1 border-2 p-2"
+            className="flex-1 max-md:w-20 border-2 p-2"
             placeholder="Charge"
             value={editCharge}
             onChange={(e) => setEditCharge(e.target.value)}
           />
           <input
             type="number"
-            className="flex-1 border-2 p-2"
+            className="flex-1 max-md:w-20 border-2 p-2"
             placeholder="amount"
             value={editAmount}
             onChange={(e) => setEditAmount(e.target.value)}

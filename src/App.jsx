@@ -58,7 +58,7 @@ function App() {
   return (
     <div className="App bg-zinc-600 min-h-screen  flex justify-start py-14 items-center flex-col">
       {alert && <Alert text={alert.text} type={alert.type} />}
-      <div className="bg-white min-h-[60%] rounded-lg p-6  w-2/3 shadow-lg shadow-zinc-800">
+      <div className="bg-white min-h-[60%] max-md:w-[90%] rounded-lg p-6  w-2/3 shadow-lg shadow-zinc-800">
         <ExpenseForm
           handleAmount={handleAmount}
           handleCharge={handleCharge}
@@ -79,7 +79,7 @@ function App() {
           })}
         </ul>
       </div>
-      <h1 className="mt-5 bg-white flex justify-between items-center rounded-lg p-3 shadow-lg shadow-black w-2/3">
+      <h1 className="mt-5 bg-white max-md:text-lg flex justify-between items-center rounded-lg p-3 shadow-lg shadow-black max-md:w-[90%] w-2/3">
         Total spend:
         <p className="text-yellow-600">
           {Expenses.reduce((prev, curr) => (prev += Number(curr.amount)), 0)}$
